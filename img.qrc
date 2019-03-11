@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/picasso_autoportrait.jpg</file>
+        <file>img/picasso_empty.png</file>
+        <file>img/picasso_left_eye.png</file>
+        <file>img/picasso_right_eye.png</file>
+        <file>img/dali_empty.png</file>
+        <file>img/dali_left_eye.png</file>
+        <file>img/dali_right_eye.png</file>
+        <file>img/hockney_empty.png</file>
+        <file>img/hockney_left_eye.png</file>
+        <file>img/hockney_right_eye.png</file>
+    </qresource>
+</RCC>

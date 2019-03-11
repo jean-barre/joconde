@@ -17,7 +17,8 @@ SOURCES += \
     detectionthread.cpp \
     qmlcontroller.cpp
 
-RESOURCES += qml.qrc
+RESOURCES += qml.qrc \
+    img.qrc
 
 CONFIG += link_pkgconfig
 PKGCONFIG += opencv4
