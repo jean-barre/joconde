@@ -92,10 +92,14 @@ void DetectionThread::detectAndDraw( Mat& img, CascadeClassifier& cascade,
         vector<Rect> nestedObjects;
         Point center;
         Scalar color = colors[i%8];
-        int radius;
+        //int radius;
 
+        double centerX = (r.x + r.width / 2) * scale;
+        double centerY = (r.y + r.height / 2) * scale;
+        double reversedCenterX = img.size().width - centerX;
+        emit faceDetected(reversedCenterX, centerY);
+        /*
         double aspect_ratio = (double)r.width/r.height;
-        emit faceDetected((r.x + r.width/2) * scale, (r.y + r.height/2) * scale);
         if( 0.75 < aspect_ratio && aspect_ratio < 1.3 )
         {
             center.x = cvRound((r.x + r.width*0.5)*scale);
@@ -126,6 +130,6 @@ void DetectionThread::detectAndDraw( Mat& img, CascadeClassifier& cascade,
             radius = cvRound((nr.width + nr.height)*0.25*scale);
             circle( img, center, radius, color, 3, 8, 0 );
         }
+        */
     }
-    //imshow( "result", img );
 }
