@@ -15,6 +15,7 @@ DetectionThread::DetectionThread(QObject *parent) : QThread (parent)
     {
         throw "ERROR: Could not open camera #" + to_string(camera);
     }
+    capture.set(CAP_PROP_FPS, 15);
 }
 
 void DetectionThread::run()
