@@ -21,16 +21,13 @@ private:
     VideoCapture capture;
     Mat frame, image;
     int camera;
-    bool tryflip;
-    CascadeClassifier cascade, nestedCascade;
+    CascadeClassifier cascade;
     double scale;
 
     string cascadeName;
     string nestedCascadeName;
     void run();
-    void detectAndDraw( Mat& img, CascadeClassifier& cascade,
-                        CascadeClassifier& nestedCascade,
-                        double scale, bool tryflip );
+    void detectAndDraw( Mat& img, CascadeClassifier& cascade, double scale);
 signals:
     void faceDetected(double, double);
 };
