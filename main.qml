@@ -4,19 +4,20 @@ import QtQuick.Layouts 1.3
 
 Window {
     visible: true
-    width: 640
-    height: 480
-    visibility: Window.FullScreen
+    width: 1280
+    height: 720
+    //visibility: Window.FullScreen
     title: qsTr("Hello World")
     color: "black"
 
     GridLayout {
         id: grid
-        columns: 2
-        rows: 2
+        columns: 3
+        rows: 1
         columnSpacing: 10
         rowSpacing: 10
         anchors.fill: parent
+        anchors.margins: 100
 
         Painter {
             id: picasso
